@@ -7,7 +7,7 @@
 %%%---------------------------------------------------------------------------------------
 -module(rpc_utils).
 
--export([do_rpc/2]).
+-export([do_rpc/2, split_out_mfa/1, args_to_terms/1]).
 
 
 do_rpc(Socket, RawData) ->
