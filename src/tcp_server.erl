@@ -9,6 +9,7 @@
 -module(tcp_server).
 -behaviour(gen_server).
 -import(rpc_utils, [do_rpc/2]).
+
 %% gen_server callbacks
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2, code_change/3]).
 
@@ -58,7 +59,7 @@ code_change(_OldVersion, State, _Extra) ->
 %%----------------------------------------------------------------------------------------
 %% @doc Starts server
 %%
-%% @spec start_link(Port::Integer()) -> {ok, Pid}
+%% @spec start_link(Port::integer()) -> {ok, Pid}
 %%		where
 %%			Pid = pid()
 %% @end
